@@ -50,10 +50,10 @@ python modules/generator/dpo.py
 - LLMs generative semantic alignment
 
 ```shell
-# fintune your dataset with lora
+# finetune your dataset with lora
 python modules/generator/lora.py
 
-# get embeddings
+# get [EOS] token embeddings
 python modules/generator/embedding.py
 ```
 
@@ -68,4 +68,4 @@ sh modules/matching/run_main.sh
 
 Due to the highly sensitive nature of personal resume information and the data confidentiality agreement signed between the researchers of this paper and the relevant enterprise, the data portion cannot be disclosed to the public. 
 
-Nevertheless, this study will provide the format of the model's data input, allowing subsequent researchers to utilize their own acquired data to conduct research.
+Nevertheless, this study will provide dataset examples, allowing subsequent researchers to utilize their own acquired data to conduct research.
