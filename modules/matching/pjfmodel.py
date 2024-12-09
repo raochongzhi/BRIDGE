@@ -3,8 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 import torch.nn.init as init
-from JRMPM import JRMPM
-from shpjf import SHPJF
 
 
 class CasualAttention(nn.Module):
@@ -178,22 +176,6 @@ class UserJobMatchingModel(nn.Module):
         self.loss_fn = nn.BCEWithLogitsLoss()
         self.model_type = model_type
 
-        # for DIEN model
-        self.dien = DIEN(d_model1, d_model1 // 2)
-        self.mlp3 = nn.Sequential(
-            nn.Linear(3584 * 3, 1024 * 4),  # 更宽的第一层
-            nn.GELU(),
-            nn.Linear(1024 * 4, 512 * 2),
-            nn.GELU(),
-            nn.Linear(512 * 2, 256),  # 输出层
-            nn.GELU(),
-            nn.Linear(256, 1)
-        )
-        ## for jrmpm model
-        self.jrmpm = JRMPM(d_model2)
-
-        ## for shpjf model
-        self.shpjf = SHPJF(d_model1, 10, d_model2, d_model1)
 
         def initialize_weights(m):
             if isinstance(m, nn.Linear):
