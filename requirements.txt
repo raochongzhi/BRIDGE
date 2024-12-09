@@ -1,0 +1,15 @@
+torch==2.2.0+cu118
+torchvision==0.17.0+cu118
+torchaudio==2.2.0+cu118
+modelscope==1.9.5
+transformers>=4.40.0
+peft==0.7.0
+datasets
+safetensors
+streamlit
+sentencepiece
+accelerate
+flash_attn==2.5.3+cu118
+vllm
+tqdm
+scikit-learn
