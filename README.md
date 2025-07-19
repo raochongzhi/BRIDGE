@@ -4,7 +4,7 @@ Official PyTorch implementation for **B**ehavio**R** **I**nsights **D**riven job
 
 ## Model Overview
 
-![fig1](fig1.svg)
+![model](model.jpg)
 
 
 
